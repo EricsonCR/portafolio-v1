@@ -37,6 +37,8 @@
 }
 
 .descripcion {
+    margin: 0;
+    padding: 10px 0;
     text-align: justify;
 }
 
@@ -45,12 +47,30 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.titulo-2 {
+    text-align: start;
+    font-weight: lighter;
+    margin: 0;
+}
+
 .subtitulo-1 {
     text-align: start;
+    font-weight: lighter;
+    margin: 0;
 }
 
 .subtitulo-2 {
     text-align: start;
+    font-weight: 500;
+    margin: 0;
+}
+
+.subtitulo-3 {
+    text-align: start;
+    font-weight: lighter;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 .skills,
@@ -86,8 +106,24 @@
         font-size: 3rem;
     }
 
+    .titulo-2 {
+        text-align: center;
+    }
+
+    .subtitulo-2 {
+        font-size: 0.9rem;
+    }
+
+    .subtitulo-3 {
+        font-size: 1rem;
+    }
+
     .skills {
         padding: 0;
+    }
+
+    .descripcion {
+        font-size: 0.8rem;
     }
 
     #home,
