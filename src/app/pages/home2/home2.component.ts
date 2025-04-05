@@ -1,30 +1,31 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
-import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { delay, map, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-home2',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './home2.component.html',
-  styleUrl: './home2.component.css'
+  styleUrls: ['./home2.component.css']
 })
 export class Home2Component implements OnInit {
 
-  private menuSubscription!: Subscription;
-
   constructor(
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private fb: FormBuilder
   ) { }
+
+  contactoForm!: FormGroup;
 
   ngOnInit() {
     if (typeof window !== 'undefined') {
-      this.menuSubscription = this.sharedService.menu.subscribe(value => {
+      this.sharedService.menu.subscribe(value => {
         this.scrollToSeccton(value);
       });
-    }
+    } this.initContactoForm();
   }
 
   scrollToSeccton(id: string) {
@@ -34,4 +35,24 @@ export class Home2Component implements OnInit {
     }
   }
 
+  initContactoForm() {
+    this.contactoForm = this.fb.group({
+      nombres: ["", Validators.required],
+      email: ["", [Validators.required, Validators.email], [emailAsyncValidator]],
+      asunto: ["", Validators.required],
+      mensaje: [""]
+    });
+  }
+
+  sendMessage() {
+    console.log(this.contactoForm.value);
+  }
+
+}
+
+export function emailAsyncValidator(control: AbstractControl): Observable<ValidationErrors | null> {
+  return of(control.value).pipe(
+    delay(1000), // Simula llamada a API
+    map(value => value === 'test@example.com' ? { emailTaken: true } : null)
+  );
 }

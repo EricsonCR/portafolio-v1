@@ -14,7 +14,8 @@
                         motivan los retos tecnológicos, con objetivos en DevOps, IA, Cloud y CI/CD. Siempre aprendiendo,
                         creando contenido y disfrutando del fútbol, el cine y los viajes. 👉 ¡Hablemos y creemos algo
                         increíble juntos!</p>
-                    <button class="btn-descargar">Descargar CV</button>
+                    <a href="https://drive.google.com/file/d/1CeKRhWMFF02ATbn6PMTiwHhsnDRzgSBT/view?usp=drive_link"
+                        target="_blank"><button class="btn-descargar">Descargar CV</button></a>
                     <div class="">
                         <img class="social-item" src="img/social/youtube.png" width="40px" alt="">
                         <a href="https://www.linkedin.com/in/ericson-cruz-70b875262/" target="_blank">
@@ -70,7 +71,7 @@
                     <h1 class="titulo">Experiencia</h1>
                     <div class="py-2">
                         <h4 class="subtitulo-1">Tecnico Soporte funcional</h4>
-                        <p class="subtitulo-2">feb. 2024 - abr. 2024 | Jesus Maria | remoto 🛠️</p>
+                        <p class="subtitulo-2">feb. 2024 - abr. 2024 | KallpaSoft | remoto 🛠️</p>
                         <p class="descripcion">Como Junior en KallpaSoft, brindé soporte en tareas funcionales dentro de
                             SAP Business One. Elaboré plantillas DTW para carga masiva de datos y desarrollé consultas
                             en Query Manager. Esta experiencia me permitió fortalecer mis habilidades técnicas,
@@ -184,37 +185,40 @@
             <div class="text-center">
                 <h1 id="contacto" class="titulo">Contacto</h1>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="row col-sm-6 py-2">
-                    <div class="col-sm-6 py-2">
-                        <label for="">Nombres</label>
-                        <input type="text" class="form-control" name="" id="">
-                    </div>
-                    <div class="col-sm-6 py-2">
-                        <label for="">Email</label>
-                        <input type="text" class="form-control" name="" id="">
-                    </div>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="row col-sm-6 py-2">
-                    <div class="">
-                        <label for="">Asunto</label>
-                        <input type="text" class="form-control" name="" id="">
+            <form [formGroup]="contactoForm" (ngSubmit)="sendMessage()">
+                <div class="row d-flex justify-content-center">
+                    <div class="row col-sm-6 py-2">
+                        <div class="col-sm-6 py-2">
+                            <label for="" class="subtitulo-3">Nombres</label>
+                            <input type="text" class="form-control" formControlName="nombres">
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <label for="" class="subtitulo-3">Email</label>
+                            <input type="email" class="form-control" formControlName="email">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="row col-sm-6 py-2">
-                    <div class="">
-                        <label for="">Mensaje</label>
-                        <textarea class="form-control" name="" id=""></textarea>
+                <div class="row d-flex justify-content-center">
+                    <div class="row col-sm-6 py-2">
+                        <div class="">
+                            <label for="" class="subtitulo-3">Asunto</label>
+                            <input type="em" class="form-control" formControlName="asunto">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-center py-2">
-                <button class="btn btn-primary py-2 px-5">Enviar</button>
-            </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="row col-sm-6 py-2">
+                        <div class="">
+                            <label for="" class="subtitulo-3">Mensaje</label>
+                            <textarea class="form-control" formControlName="mensaje"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center py-2">
+                    <button class="btn btn-primary py-2 px-5" type="submit"
+                        [disabled]="contactoForm.invalid">Enviar</button>
+                </div>
+            </form>
         </div>
     </div><!--container-fluid-->
 </div><!--contenedor-->
