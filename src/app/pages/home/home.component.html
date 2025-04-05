@@ -1,0 +1,120 @@
+<!--Color fonfo-->
+<div class="fondo">
+    <!--Hacer una fila-->
+    <div class="home">
+        <!--imagen-->
+        <div class="left">
+            <img class="photo" src="img/personal/foto-abastracto.jpg" alt="">
+        </div>
+        <!--descripcion-->
+        <div class="right">
+            <h1 class="nombre">Ericson Cruz</h1>
+            <h4 class="profesion">Desarrollador de Software</h4>
+            <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam distinctio, blanditiis
+                quis impedit
+                doloremque ipsa, eos reiciendis asperiores facilis rem dolorum nostrum provident soluta corporis
+                voluptatum recusandae est odit. Aspernatur.</p>
+            <button class="descargar">Descargar CV</button>
+            <div class="social">
+                <img class="social-item" src="img/social/youtube.png" width="40px" alt="">
+                <img class="social-item" src="img/social/linkedin.png" width="40px" alt="">
+                <img class="social-item" src="img/social/github.png" width="40px" alt="">
+                <img class="social-item" src="img/social/whatsapp.png" width="40px" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="acercade">
+        <div class="left">
+            <h1 class="nombre">Sobre mi</h1>
+            <p class="descripcion">Hola, soy <strong>Ericson Cruz</strong>, desarrollador web y diseñador UI/UX con
+                pasión por crear
+                experiencias digitales
+                atractivas, funcionales y centradas en el usuario. Con 4 años de experiencia en el sector, siempre busco
+                formas nuevas e innovadoras de hacer realidad las visiones de mis clientes.</p>
+            <p class="descripcion">
+                Creo que el diseño es mucho más que simplemente hacer que las cosas se vean bonitas: se trata de
+                resolver problemas y crear experiencias intuitivas y agradables para los usuarios.</p>
+            <p class="descripcion">
+                Ya sea que trabaje en un sitio web, una aplicación móvil u otro producto digital, aporto mi compromiso
+                con la excelencia en el diseño y el enfoque en el usuario a cada proyecto. Espero con ansias la
+                oportunidad de aportar mis habilidades y pasión a su próximo proyecto.</p>
+        </div>
+        <div class="right">
+            <img class="photo" src="img/personal/student-2.png" alt="">
+        </div>
+    </div>
+    <div class="carrera">
+        <div class="left">
+            <h1 class="nombre">Experiencia</h1>
+            <div>
+                <h4 class="profesion">Ingeniero de software</h4>
+                <p>2022-Presente | Mountain View, CA</p>
+                <p class="descripcion">Trabajó en un equipo responsable del desarrollo de nuevas funciones para el motor
+                    de búsqueda de Google, incluida la mejora de la precisión y la relevancia de los resultados de
+                    búsqueda y el desarrollo de nuevas herramientas para el análisis y la visualización de datos.</p>
+            </div>
+            <div>
+                <h4 class="profesion">Ingeniero de software</h4>
+                <p>2022-Presente | Mountain View, CA</p>
+                <p class="descripcion">Trabajó en un equipo responsable del desarrollo de una nueva función de
+                    aplicación móvil que permitía a los usuarios crear y compartir contenido de video de formato corto,
+                    incluido el diseño e implementación de una nueva interfaz de usuario y el desarrollo de la
+                    infraestructura de backend para respaldar la función.</p>
+            </div>
+        </div>
+        <div class="right">
+            <h1 class="nombre">Educacion</h1>
+            <div>
+                <h4 class="profesion">Igenieria de Sistemas</h4>
+                <p>2025-Presente | UPC</p>
+                <p class="descripcion">Trabajó en un equipo responsable del desarrollo de nuevas funciones para el motor
+                    de búsqueda de Google, incluida la mejora de la precisión y la relevancia de los resultados de
+                    búsqueda y el desarrollo de nuevas herramientas para el análisis y la visualización de datos.</p>
+            </div>
+            <div>
+                <h4 class="profesion">Computacion e Informatica</h4>
+                <p>2022-2024 | CIBERTEC</p>
+                <p class="descripcion">Trabajó en un equipo responsable del desarrollo de una nueva función de
+                    aplicación móvil que permitía a los usuarios crear y compartir contenido de video de formato corto,
+                    incluido el diseño e implementación de una nueva interfaz de usuario y el desarrollo de la
+                    infraestructura de backend para respaldar la función.</p>
+            </div>
+        </div>
+    </div>
+    <div class="skills">
+        <h1 class="nombre">Skills</h1>
+        <div class="skills-container">
+            <span class="skill-tag" *ngFor="let skill of skills; let i = index"
+                [ngStyle]="{'--bg-color': colors[i].bg,'--text-color': colors[i].text}">
+                {{ skill }}
+            </span>
+        </div>
+    </div>
+    <div>
+        <h1 class="nombre">Proyectos</h1>
+    </div>
+    <div class="proyectos">
+        <div class="left">
+            <div class="sitio">
+                <img class="photo" src="img/sitio-1.png" alt="">
+                <p class="">Sitio web</p>
+                <h1 class="profesion">Tienda SmarTech</h1>
+                <div class="enlace">
+                    <div><a href="">SmarTech.com</a></div>
+                    <div><img src="img/social/github.png" width="24px" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="sitio">
+                <img class="photo" src="img/sitio-2.png" alt="">
+                <p class="">Sitio web</p>
+                <h1 class="profesion">Tienda SmarTech</h1>
+                <div class="enlace">
+                    <div><a href="">SmarTech.com</a></div>
+                    <div><img src="img/social/github.png" width="24px" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
