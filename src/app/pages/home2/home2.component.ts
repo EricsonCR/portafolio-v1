@@ -3,6 +3,7 @@ import { SharedService } from '../../services/shared.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { delay, map, Observable, of } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home2',
@@ -45,7 +46,16 @@ export class Home2Component implements OnInit {
   }
 
   sendMessage() {
-    console.log(this.contactoForm.value);
+    this.mensaje();
+    this.contactoForm.reset();
+  }
+
+  mensaje() {
+    Swal.fire({
+      title: "Email enviado",
+      text: "Esto es solo una prueba, puede utilizar el link de whatsapp para contactar.",
+      icon: "success"
+    });
   }
 
 }
