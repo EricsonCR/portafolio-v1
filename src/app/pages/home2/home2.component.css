@@ -63,6 +63,7 @@
     text-align: start;
     font-weight: 500;
     margin: 0;
+    font-size: 1rem;
 }
 
 .subtitulo-3 {
@@ -70,7 +71,7 @@
     font-weight: lighter;
     padding: 5px 0;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .skills,
@@ -115,7 +116,7 @@
     }
 
     .subtitulo-3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .skills {
