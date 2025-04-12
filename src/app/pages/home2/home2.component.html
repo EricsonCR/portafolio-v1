@@ -15,9 +15,9 @@
                         creando contenido y disfrutando del fútbol, el cine y los viajes. 👉 ¡Hablemos y creemos algo
                         increíble juntos!</p>
                     <a href="https://drive.google.com/file/d/1CeKRhWMFF02ATbn6PMTiwHhsnDRzgSBT/view?usp=drive_link"
-                        target="_blank"><button class="btn-descargar">Descargar CV</button></a>
+                        target="_blank"><button class="btn-descargar fs-08rem">Descargar CV</button></a>
                     <div class="">
-                        <img class="social-item" src="img/social/youtube.png" width="24px" alt="">
+                        <a class="manito"><img class="social-item" src="img/social/youtube.png" width="24px" alt=""></a>
                         <a href="https://www.linkedin.com/in/ericson-cruz-70b875262/" target="_blank">
                             <img class="social-item" src="img/social/linkedin.png" width="24px" alt="">
                         </a>
@@ -123,21 +123,21 @@
             </div>
             <div class="d-flex justify-content-center">
                 <div class="col-sm-10">
-                    <button class="btn btn-success px-4 mx-2 my-2">Java</button>
-                    <button class="btn btn-primary px-4 mx-2 my-2">C#</button>
-                    <button class="btn btn-danger px-4 mx-2 my-2">Spring boot</button>
-                    <button class="btn btn-warning px-4 mx-2 my-2">.Net Core</button>
-                    <button class="btn btn-info px-4 mx-2 my-2">Angular</button>
-                    <button class="btn btn-secondary px-4 mx-2 my-2">MySQL</button>
-                    <button class="btn btn-dark px-4 mx-2 my-2">SQL Server</button>
-                    <button class="btn btn-light px-4 mx-2 my-2">GitHub</button>
-                    <button class="btn btn-primary px-4 mx-2 my-2">Docker</button>
-                    <button class="btn btn-success px-4 mx-2 my-2">DepOps</button>
-                    <button class="btn btn-info px-4 mx-2 my-2">Agil</button>
-                    <button class="btn btn-dark px-4 mx-2 my-2">Arduino</button>
-                    <button class="btn btn-danger px-4 mx-2 my-2">STM32</button>
-                    <button class="btn btn-secondary px-4 mx-2 my-2">Raspberry</button>
-                    <button class="btn btn-warning px-4 mx-2 my-2">MQTT</button>
+                    <button class="btn btn-success px-4 mx-2 my-2 fs-08rem">Java</button>
+                    <button class="btn btn-primary px-4 mx-2 my-2 fs-08rem">C#</button>
+                    <button class="btn btn-danger px-4 mx-2 my-2 fs-08rem">Spring boot</button>
+                    <button class="btn btn-warning px-4 mx-2 my-2 fs-08rem">.Net Core</button>
+                    <button class="btn btn-info px-4 mx-2 my-2 fs-08rem">Angular</button>
+                    <button class="btn btn-secondary px-4 mx-2 my-2 fs-08rem">MySQL</button>
+                    <button class="btn btn-dark px-4 mx-2 my-2 fs-08rem">SQL Server</button>
+                    <button class="btn btn-light px-4 mx-2 my-2 fs-08rem">GitHub</button>
+                    <button class="btn btn-primary px-4 mx-2 my-2 fs-08rem">Docker</button>
+                    <button class="btn btn-success px-4 mx-2 my-2 fs-08rem">DepOps</button>
+                    <button class="btn btn-info px-4 mx-2 my-2 fs-08rem">Agil</button>
+                    <button class="btn btn-dark px-4 mx-2 my-2 fs-08rem">Arduino</button>
+                    <button class="btn btn-danger px-4 mx-2 my-2 fs-08rem">STM32</button>
+                    <button class="btn btn-secondary px-4 mx-2 my-2 fs-08rem">Raspberry</button>
+                    <button class="btn btn-warning px-4 mx-2 my-2 fs-08rem">MQTT</button>
                 </div>
             </div>
         </div>
@@ -147,34 +147,35 @@
                 <h1 class="titulo">Proyectos</h1>
             </div>
             <div class="d-flex justify-content-center">
-                <div class="row col-sm-10">
+                <div class="row col-sm-10 justify-content-center">
                     <div class="col-lg-4 col-md-6 col-sm-12 py-2">
                         <div class="sitio">
                             <img class="photo" src="img/proyecto-1.png" alt="">
                             <h1 class="subtitulo-3">SmarTech | tienda</h1>
                             <div class="d-flex justify-content-between">
-                                <div><a class="subtitulo-2" target="_blank" href="https://tienda-smartech.netlify.app/">SmarTech.com</a>
+                                <div><a class="subtitulo-2" target="_blank"
+                                        href="https://tienda-smartech.netlify.app/">SmarTech.com</a>
                                 </div>
                                 <div><img class="photo" src="img/social/github.png" width="24px" alt=""></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 py-2">
+                    <div [hidden]="true" class="col-lg-4 col-md-6 col-sm-12 py-2">
                         <div class="sitio">
                             <img class="photo" src="img/sitio-2.png" alt="">
                             <h1 class="subtitulo-3">School JoseMaria | sistema pagos</h1>
                             <div class="d-flex justify-content-between">
-                                <div><a class="subtitulo-2" href="">Scholljm.com</a></div>
+                                <div class="manito"><a class="subtitulo-2">Scholljm.com</a></div>
                                 <div><img class="photo" src="img/social/github.png" width="24px" alt=""></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 py-2">
+                    <div [hidden]="true" class="col-lg-4 col-md-6 col-sm-12 py-2">
                         <div class="sitio">
                             <img class="photo" src="img/sitio-1.png" alt="">
                             <h1 class="subtitulo-3">RTOS | sistema monitoreo</h1>
                             <div class="d-flex justify-content-between">
-                                <div><a class="subtitulo-2" href="">Iotmonitor.com</a></div>
+                                <div class="manito"><a class="subtitulo-2">Iotmonitor.com</a></div>
                                 <div><img class="photo" src="img/social/github.png" width="24px" alt=""></div>
                             </div>
                         </div>
@@ -191,11 +192,11 @@
                     <div class="row col-sm-6 py-2">
                         <div class="col-sm-6 py-2">
                             <label for="" class="subtitulo-3">Nombres</label>
-                            <input type="text" class="form-control" formControlName="nombres">
+                            <input type="text" class="form-control fs-08rem" formControlName="nombres">
                         </div>
                         <div class="col-sm-6 py-2">
                             <label for="" class="subtitulo-3">Email</label>
-                            <input type="email" class="form-control" formControlName="email">
+                            <input type="email" class="form-control fs-08rem" formControlName="email">
                         </div>
                     </div>
                 </div>
@@ -203,7 +204,7 @@
                     <div class="row col-sm-6 py-2">
                         <div class="">
                             <label for="" class="subtitulo-3">Asunto</label>
-                            <input type="em" class="form-control" formControlName="asunto">
+                            <input type="em" class="form-control fs-08rem" formControlName="asunto">
                         </div>
                     </div>
                 </div>
@@ -211,12 +212,12 @@
                     <div class="row col-sm-6 py-2">
                         <div class="">
                             <label for="" class="subtitulo-3">Mensaje</label>
-                            <textarea class="form-control" formControlName="mensaje"></textarea>
+                            <textarea class="form-control fs-08rem" formControlName="mensaje"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center py-2">
-                    <button class="btn btn-primary py-2 px-5" type="submit"
+                    <button class="btn btn-primary py-2 px-5 fs-08rem" type="submit"
                         [disabled]="contactoForm.invalid">Enviar</button>
                 </div>
             </form>
